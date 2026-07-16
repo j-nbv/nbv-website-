@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Nu Biz Ventures</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --navy: #07162b;
+      --blue: #0b5cff;
+      --ink: #0b1220;
+      --text: #4b5565;
+      --line: #e5eaf1;
+      --light: #f5f6f8;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       Top Bar
+    ========================= */
+    .topbar {
+      background: #061225;
+      color: #d8e6ff;
+      font-size: 13px;
+    }
+
+    .topbar .wrap {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .topbar a {
+      color: #ffffff;
+      opacity: 0.95;
+    }
+
+    .topbar-contact {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .topbar-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .topbar-contact svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      opacity: 0.9;
+      flex: 0 0 auto;
+    }
+
+    .topbar-divider {
+      opacity: 0.7;
+    }
+
+    /* =========================
+       Header / Navigation
+    ========================= */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.04);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .logo-img {
+      display: block;
+      width: 155px;
+      max-height: 52px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 650;
+      color: #263246;
+    }
+
+    .nav-links a {
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-dropdown {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-dropdown span {
+      font-size: 11px;
+      line-height: 1;
+      position: relative;
+      top: 1px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 230px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(16, 24, 40, 0.14);
+      padding: 10px;
+      display: none;
+      z-index: 100;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 11px 13px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #263246;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f5f8fc;
+      color: var(--blue);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    
+    .nav-dropdown {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-dropdown span {
+      font-size: 11px;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: 0.22s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 12px 28px rgba(11, 92, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #004be0;
+    }
+
+    .btn-outline {
+      border: 1px solid #cdd8e6;
+      color: #162033;
+      background: #ffffff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* =========================
+       Homepage Product Showcase
+    ========================= */
+    .home-showcase {
+      min-height: calc(100vh - 114px);
+      background: #111111;
+      padding: 64px 0 74px;
+      display: flex;
+      align-items: center;
+    }
+
+    .showcase-grid {
+      width: min(1420px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.08fr 1.08fr 1.08fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .showcase-col {
+      display: grid;
+      gap: 30px;
+      min-height: 650px;
+    }
+
+    .showcase-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #111111;
+      min-height: 310px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    .showcase-card.tall {
+      min-height: 650px;
+    }
+
+    .showcase-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.01);
+      transition: transform 0.45s ease, filter 0.45s ease;
+    }
+
+    .showcase-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.25);
+      transition: background 0.35s ease;
+    }
+
+    .showcase-card::after {
+      content: "Click to view";
+      position: absolute;
+      left: 50%;
+      bottom: 34px;
+      z-index: 3;
+      transform: translate(-50%, 12px);
+      opacity: 0;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: 0.3s ease;
+    }
+
+    .showcase-card:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.9);
+    }
+
+    .showcase-card:hover::before {
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    .showcase-card:hover::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .showcase-title {
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: #ffffff;
+      text-align: center;
+      font-size: clamp(28px, 2.6vw, 48px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .showcase-card.small .showcase-title {
+      font-size: clamp(24px, 2vw, 36px);
+    }
+
+    /* =========================
+       General Sections
+    ========================= */
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 34px;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      font-weight: 900;
+    }
+
+    .section-head p {
+      max-width: 440px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    /* =========================
+       Product Details
+    ========================= */
+    .products {
+      background: #ffffff;
+    }
+
+    .product-stack {
+      display: grid;
+      gap: 26px;
+    }
+
+    .product-block {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 28px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      background: #ffffff;
+      box-shadow: 0 18px 55px rgba(16, 24, 40, 0.06);
+    }
+
+    .product-block:nth-child(even) {
+      grid-template-columns: 1.15fr 1fr;
+    }
+
+    .product-block:nth-child(even) .product-copy {
+      order: 2;
+    }
+
+    .product-copy {
+      padding: 20px;
+    }
+
+    .product-copy h3 {
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+    }
+
+    .product-copy p {
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .product-img {
+      height: 360px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #eaf2fb;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mini-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .mini-list span {
+      background: #f5f8fc;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 750;
+      color: #263246;
+    }
+
+    /* =========================
+       Distributor Section
+    ========================= */
+    .distributor {
+      background: #ffffff;
+    }
+
+    .dist-inner {
+      text-align: center;
+    }
+
+    .dist-inner h2 {
+      font-size: clamp(26px, 3.5vw, 40px);
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .dist-inner > p {
+      color: var(--text);
+      font-size: 16px;
+      max-width: 540px;
+      margin: 0 auto 44px;
+    }
+
+    .dist-logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .dist-logo-box {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      padding: 32px 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 24px rgba(16,24,40,0.06);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .dist-logo-box:hover {
+      box-shadow: 0 10px 40px rgba(11,92,255,0.12);
+      transform: translateY(-3px);
+    }
+
+    .dist-logo-box img {
+      width: 220px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .dist-badge {
+      display: inline-block;
+      background: #edf5ff;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 5px 14px;
+    }
+
+    /* =========================
+       Brands
+    ========================= */
+    .clients {
+      background: #f7faff;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .client-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(16, 24, 40, 0.05);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .client-logo:hover {
+      box-shadow: 0 8px 28px rgba(11, 92, 255, 0.10);
+      transform: translateY(-2px);
+    }
+
+    .client-logo img {
+      width: 100%;
+      height: 48px;                    /* fixed height — all logos sit at same level */
+      max-width: 130px;
+      object-fit: contain;             /* scales logo to fit without cropping */
+      object-position: center center;  /* always centred inside that space */
+      display: block;
+      margin: 0 auto;                  /* centres the img element horizontally */
+      filter: grayscale(100%);
+      opacity: 0.65;
+      transition: filter 0.2s, opacity 0.2s;
+    }
+
+    .client-logo img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    /* =========================
+       Success / Projects
+    ========================= */
+    .success {
+      background: #ffffff;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .case-card {
+      position: relative;
+      height: 230px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #13213a;
+    }
+
+    .case-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.82);
+      transition: 0.35s;
+    }
+
+    .case-card:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.65);
+    }
+
+    .case-text {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      color: #ffffff;
+    }
+
+    .case-text small {
+      display: block;
+      color: #afd1ff;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+
+    .case-text h3 {
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    /* =========================
+       Why Section
+    ========================= */
+    .why {
+      background: #f2f6fb;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #edf5ff;
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    /* =========================
+       Contact
+    ========================= */
+    .contact {
+      background: #07162b;
+      color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .contact h2 {
+      color: #ffffff;
+    }
+
+    .contact p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+    }
+
+    .contact-info {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-info div {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .form {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 28px;
+      color: var(--ink);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #263246;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 14px;
+      font: inherit;
+      color: var(--ink);
+      background: #fbfcfe;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+    footer {
+      background: var(--light);
+      padding: 56px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 350px 220px 220px;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 38px;
+      align-items: start;
+    }
+
+    .footer-grid > div:first-child {
+      margin-right: 60px;
+    }
+
+    footer h4 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+
+    footer .logo-img {
+      width: 160px;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    footer p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    footer ul li a {
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    footer ul li a:hover {
+      color: var(--blue);
+    }
+
+    footer ul li strong {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .footer-contact-list {
+      gap: 14px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--ink);
+      flex: 0 0 auto;
+    }
+
+    .footer-contact-item span {
+      line-height: 1.45;
+    }
+
+    .copyright {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      text-align: center;
+      color: #8792a3;
+      font-size: 13px;
+    }
+
+    /* =========================
+       Floating WhatsApp
+    ========================= */
+    .whatsapp-float {
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      z-index: 99;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #20d466;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+      fill: #ffffff;
+    }
+
+    /* =========================
+       Responsive
+    ========================= */
+    @media (max-width: 980px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: inline-flex;
+      }
+
+      .nav-inner {
+        height: 68px;
+      }
+
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      .home-showcase {
+        min-height: auto;
+        padding: 34px 0;
+      }
+
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: min(100% - 28px, 720px);
+      }
+
+      .showcase-col {
+        min-height: auto;
+        gap: 18px;
+      }
+
+      .showcase-card,
+      .showcase-card.tall {
+        min-height: 300px;
+      }
+
+      .showcase-title {
+        font-size: 32px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 14px;
+      }
+
+      .product-block,
+      .product-block:nth-child(even),
+      .dist-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-block:nth-child(even) .product-copy {
+        order: 0;
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .case-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid > div:not(:first-child),
+      .footer-grid > div:first-child {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .logo-img {
+        width: 155px;
+        max-height: 46px;
+      }
+
+      footer .logo-img {
+        width: 160px;
+      }
+
+      .showcase-card,
+      .showcase-card.tall {
+        min-height: 230px;
+      }
+
+      .showcase-title {
+        font-size: 26px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .product-img {
+        height: 240px;
+      }
+
+      .product-copy h3 {
+        font-size: 27px;
+      }
+
+      .mini-list {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        padding: 12px 16px;
+      }
+
+      .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        right: 18px;
+        bottom: 18px;
+      }
+    }
+  
+
+
+    /* =========================
+       About Page
+    ========================= */
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .about-hero {
+      background: #000000;
+      color: #ffffff;
+      padding: 52px 0 48px;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      font-weight: 900;
+    }
+
+    /* Brands static grid for about page */
+    .about-brands {
+      background: #f5f6f8;
+      padding: 64px 0;
+    }
+
+    .about-brands .section-head {
+      margin-bottom: 36px;
+    }
+
+    .about-brands .section-head h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      margin-top: 8px;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .brand-logo {
+      height: 92px;
+      border: 1px solid #e5eaf1;
+      border-radius: 18px;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 14px;
+      color: #9aa7b8;
+      letter-spacing: -0.02em;
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.3);
+      padding: 18px;
+      min-height: 390px;
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: 354px;
+      border-radius: 24px;
+      object-fit: cover;
+      filter: brightness(0.86);
+    }
+
+    .visual-card {
+      position: absolute;
+      left: -18px;
+      bottom: 30px;
+      width: min(280px, 80%);
+      background: #ffffff;
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 20px 55px rgba(0,0,0,0.22);
+    }
+
+    .visual-card strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .visual-card span {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .intro-panel {
+      background: #ffffff;
+      padding: 76px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .intro-copy h2,
+    .about-section h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .intro-copy p,
+    .about-section p {
+      color: var(--text);
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .stat-card {
+      border: 1px solid var(--line);
+      background: #f8fbff;
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 34px;
+      color: var(--blue);
+      letter-spacing: -0.055em;
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+
+    .stat-card span {
+      color: #263246;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .about-section {
+      padding: 90px 0;
+    }
+
+    .about-section.soft {
+      background: #f2f6fb;
+    }
+
+    .about-section.dark {
+      background: #07162b;
+      color: #ffffff;
+    }
+
+    .about-section.dark p,
+    .about-section.dark .section-head p {
+      color: rgba(255,255,255,0.70);
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 38px;
+      align-items: stretch;
+    }
+
+    .story-image {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 430px;
+      background: #eaf2fb;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: #ffffff;
+      padding: 36px;
+      box-shadow: 0 18px 55px rgba(16, 24, 40, 0.06);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .feature-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      border-radius: 18px;
+      background: #f7faff;
+      border: 1px solid var(--line);
+    }
+
+    .feature-no {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #edf5ff;
+      color: var(--blue);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .feature-row h3 {
+      font-size: 16px;
+      margin-bottom: 3px;
+      letter-spacing: -0.02em;
+    }
+
+    .feature-row p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .partner-grid {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .partner-card {
+      width: 360px;
+      min-height: 300px;
+      background: #ffffff;
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 34px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+    }
+
+    .partner-logo {
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+
+    .partner-logo img {
+      width: 210px;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    .partner-card h3 {
+      font-size: 21px;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .partner-card p {
+      color: var(--text) !important;
+      font-size: 15px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .cap-card {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #ffffff;
+      padding: 26px;
+      min-height: 230px;
+      transition: 0.25s ease;
+    }
+
+    .cap-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(11,92,255,0.10);
+      border-color: #c9dcff;
+    }
+
+    .cap-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: #edf5ff;
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .cap-card h3 {
+      font-size: 18px;
+      line-height: 1.16;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .cap-card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .clients-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .client-box {
+      height: 96px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 16px;
+      color: #263246;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .about-contact {
+      background: #07162b;
+      color: #ffffff;
+      padding: 90px 0;
+    }
+
+    .about-contact .eyebrow,
+    .about-section.dark .eyebrow {
+      color: #8fbdff;
+    }
+
+    @media (max-width: 980px) {
+      .about-hero-grid,
+      .intro-grid,
+      .story-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: auto;
+      }
+
+      .partner-grid,
+      .capability-grid,
+      .clients-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .about-hero {
+        padding: 68px 0 54px;
+      }
+
+      .about-hero p {
+        font-size: 16px;
+      }
+
+      .stat-grid,
+      .partner-grid,
+      .capability-grid,
+      .clients-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 14px;
+      }
+
+      .story-card {
+        padding: 26px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div>Singapore &amp; Malaysia · Displays, Lighting, Electrical &amp; Automotive Solutions</div>
+
+      <div class="topbar-contact">
+        <a href="mailto:nubizventures@outlook.com" aria-label="Email Nu Biz Ventures">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+          </svg>
+          nubizventures@outlook.com
+        </a>
+
+        <span class="topbar-divider">|</span>
+
+        <a href="tel:+6583972678" aria-label="Call Nu Biz Ventures">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/>
+          </svg>
+          +65 8397 2678
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="images/nbv logo transparent.png" alt="Nu Biz Ventures Logo">
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+
+        <div class="nav-item dropdown">
+          <a href="index.html#products" class="nav-dropdown">
+            Products <span>⌄</span>
+          </a>
+
+        <div class="dropdown-menu">
+          <a href="index.html#interactive-smartboard">Interactive Smartboard</a>
+          <a href="index.html#digital-signage">Digital Signage</a>
+          <a href="index.html#3d-display">3D Spatial Display</a>
+          <a href="index.html#lcd-video-wall">LCD Video Wall</a>
+        </div>
+      </div>
+
+      <a href="projects.html">Projects</a>
+
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline mobile-menu" href="index.html#products">Menu</a>
+        <a class="btn btn-primary" href="contact.html#partner">Become A Partner</a>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main>
+    <section class="about-hero">
+      <div class="wrap">
+        <h1>About Us</h1>
+      </div>
+    </section>
+
+    <section class="intro-panel">
+      <div class="wrap intro-grid">
+        <div class="intro-copy">
+          <div class="eyebrow">Our Company</div>
+          <h2>Connecting needs, delivering solutions.</h2>
+          <p>Nu Biz Ventures was founded to help clients source and implement practical business solutions with a fresh, reliable and service-oriented approach.</p>
+          <p>From commerical display solutions to lighting supply and electrical works, we aim to recommend solutions that fit each client’s usage, site conditions, budget and long-term maintenance needs.</p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><strong>01</strong><span>Business-focused consultation</span></div>
+          <div class="stat-card"><strong>02</strong><span>Authorised brand access</span></div>
+          <div class="stat-card"><strong>03</strong><span>Supply, setup and coordination</span></div>
+          <div class="stat-card"><strong>04</strong><span>Multi-industry involvement</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section soft">
+      <div class="wrap story-layout">
+        <div class="story-image">
+          <img src="images/digital_signage_only.png" alt="Commercial digital signage installation">
+        </div>
+        <div class="story-card">
+          <div class="eyebrow">Our Story</div>
+          <h2>Built from real business needs.</h2>
+          <p>Our journey started from understanding how businesses actually purchase, install and maintain the products they use daily. That experience shaped the way we work — practical, responsive and focused on useful outcomes.</p>
+          <p>As we expanded into digital signage and display solutions, our goal remained the same: to help customers choose the right product and make implementation smoother from enquiry to setup.</p>
+          <div class="feature-list">
+            <div class="feature-row">
+              <div class="feature-no">1</div>
+              <div><h3>Understand requirements</h3><p>We first look at your space, usage, budget and project objective.</p></div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-no">2</div>
+              <div><h3>Recommend suitable options</h3><p>We advise the right screen type, size, setup and support approach.</p></div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-no">3</div>
+              <div><h3>Coordinate delivery and support</h3><p>We assist with quotation, supply, setup coordination and after-sales communication.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Our Partners</div>
+            <h2>Global display technology leaders.</h2>
+          </div>
+        </div>
+          
+        <div class="partner-grid">
+          <div class="partner-card">
+            <div>
+              <div class="partner-logo"><img src="images/leyard logo.png" alt="Leyard logo"></div>
+              <p>A global leader in LED display, video wall and visualisation technologies, serving commercial, retail, education, entertainment and mission-critical environments worldwide.</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <div>
+              <div class="partner-logo"><img src="images/planar logo transparent.png" alt="Planar logo"></div>
+              <p>Premium LCD and LED display solutions trusted for corporate, control room, broadcast and high-impact commercial applications around the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">What We Do</div>
+            <h2>One partner across multiple industry.</h2>
+          </div>
+        </div>
+          
+        <div class="capability-grid">
+          <div class="cap-card">
+            <div class="cap-icon">01</div>
+            <h3>Digital Display Solutions</h3>
+            <p>Interactive smartboards, digital signage, LCD video walls and 3D spatial display solutions.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon">02</div>
+            <h3>Lighting Supply</h3>
+            <p>Lighting products and sourcing support for commercial and residential requirements.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon">03</div>
+            <h3>Electrical Works</h3>
+            <p>Support for electrical service coordination, installation needs and site-related requirements.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon">04</div>
+            <h3>Automotive Supply</h3>
+            <p>Product sourcing and supply for your automotive spare parts needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="section clients">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Brands We Carry</div>
+            <h2>Trusted brands.</h2>
+          </div>
+        </div>
+
+        <div class="logo-grid">
+          <div class="client-logo"><img src="images/brands we carry/leyard logo.png" alt="Leyard"></div>
+          <div class="client-logo"><img src="images/brands we carry/planar logo transparent.png" alt="Planar"></div>
+          <div class="client-logo"><img src="images/brands we carry/AZ E Lite logo transparent background.png" alt="AZ e-lite"></div>
+          <div class="client-logo"><img src="images/brands we carry/megaman logo.png" alt="Megaman"></div>
+          <div class="client-logo"><img src="images/logo-viewsonic.png" alt="ViewSonic"></div>
+          <div class="client-logo"><img src="images/logo-benq.png" alt="BenQ"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">
+            <img class="logo-img" src="images/nbv logo transparent.png" alt="Nu Biz Ventures Logo">
+          </a>
+          <p style="margin-top: 16px;">Connecting Needs, Delivering Solutions.</p>
+        </div>
+
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="index.html#interactive-smartboard">Interactive Smartboard</a></li>
+            <li><a href="index.html#digital-signage">Digital Signage</a></li>
+            <li><a href="index.html#3d-display">3D Spatial Display</a></li>
+            <li><a href="index.html#lcd-video-wall">LCD Video Wall</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+              </svg>
+              <span>nubizventures@outlook.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"/>
+              </svg>
+              <span>+65 8397 2678</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">© 2026 Nu Biz Ventures Pte Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/6583972678" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.04 3C9.42 3 4.04 8.38 4.04 15c0 2.12.56 4.2 1.62 6.03L4 29l8.16-1.61A11.95 11.95 0 0 0 16.04 27c6.62 0 12-5.38 12-12S22.66 3 16.04 3zm0 21.8c-1.78 0-3.52-.48-5.04-1.39l-.36-.21-4.84.95.98-4.72-.24-.38A9.73 9.73 0 0 1 6.24 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.42-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+</body>
+</html>
